@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+li{
+    list-style-type: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 7vw;
+}
+
+.sub-lista{
+    display: none;
+
+}
+.lista li{
+    position: relative;
+
+}
+
+.lista li:hover .sub-lista{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(237, 199, 127);
+    padding: 10px;
+    border-radius: 5px;
+    animation-name: aparecer;
+    animation-duration: 300ms;
+}
+
+.hero{
+    display: flex;
+    padding: 50px 7vw;
+
+}
+
+.hero-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.hero-left h1{
+    font-size: 60px;
+
+}
+
+
+.hero-left p{
+    font-size: 24px;
+}
+.hero-left h1 span{
+    color:blueviolet;
+}
+.hero-right{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.card-container{
+    position: relative;
+}
+
+
+.card-rotate{
+    position: absolute;
+    z-index: 1;
+    rotate: 35deg;
+    background-color: blueviolet;
+    width: 330px;
+    height: 400px;
+    border-radius: 10px;
+
+}
+.card{
+    position: relative;
+    width: 330px;
+    height: 400px;
+    z-index: 2;
+    background-color: rgb(215, 177, 250);
+    display: flex;
+    align-items: end;
+    border-radius: 10px;
+}
